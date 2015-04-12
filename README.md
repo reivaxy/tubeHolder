@@ -7,7 +7,7 @@ The source file (.FCStd) was created with FreeCAD, and the .obj file can be used
 
 Can be adapted to thicker glass by simply widening the space between the 2 branches.
 
-Warning: This item had not yet been printed, it's a work in progress.
+Warning: This item has not yet been printed, it's a work in progress.
 
 <img src="http://adgjm.eu/img/tubeHolder.png"/>
 
