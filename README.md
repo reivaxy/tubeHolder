@@ -18,7 +18,7 @@ Here is the first printed item:
 
 And here is the application:
 
-<img src="http://adgjm.eu/img/github/tubeHolder2.jpg" width="400px"/>
+<img src="http://adgjm.eu/img/github/tubeHolder3.jpg" width="400px"/>
 
 Which is much better than the previous "solution" where all tubes become mostly stuck, and liquids were splashing everywhere:
 
