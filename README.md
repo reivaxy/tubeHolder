@@ -10,15 +10,20 @@ Can be adapted to thicker glass by simply widening the space between the 2 branc
 
 Here is the design:
 
-<img src="http://adgjm.eu/img/github/tubeHolder.png" height="320"/>
+<img src="http://adgjm.eu/img/github/tubeHolder.png" width="400px"/>
 
 Here is the first printed item:
 
-<img src="http://adgjm.eu/img/github/tubeHolder1.jpg" height="480"/>
+<img src="http://adgjm.eu/img/github/tubeHolder1.jpg" width="400px"/>
 
 And here is the application:
 
-<img src="http://adgjm.eu/img/github/tubeHolder2.jpg" height="480"/>
+<img src="http://adgjm.eu/img/github/tubeHolder2.jpg" width="400px"/>
+
+Which is much better than the previous "solution" where all tubes become mostly stuck, and liquids were splashing everywhere:
+
+<img src="http://adgjm.eu/img/github/IMG_20150418_120105-1024" width="400px"/>
+
 
 
 # License:
