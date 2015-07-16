@@ -26,7 +26,7 @@ module tubeBracket(holeCount, glassThickness) {
       }
       cube([width, thickness, 22]); // vertical top
       translate([0, -16,0])
-        cube([width, 55, thickness]);  // horizontal
+        cube([width, 42 + spacing, thickness]);  // horizontal
       translate([0, 0, -80]) {
         difference() {
           cube([width, thickness, 80]);  // vertical down
@@ -35,14 +35,14 @@ module tubeBracket(holeCount, glassThickness) {
             cube([width + 10, 10, 20]);
         }
       }
-      rotate(-5, [1, 0, 0])
-        translate([0, spacing + thickness, -75])
-        difference() {
-          cube([width, thickness, 80]);
-          translate([-5,1,-5])
-          rotate(40, [1,0,0])
-            cube([width + 10, 10, 20]);
-        }
+      translate([0, spacing , -75])
+        rotate(-5, [1, 0, 0])
+          difference() {
+            cube([width, thickness, 80]);
+            translate([-5,1,-5])
+            rotate(40, [1,0,0])
+              cube([width + 10, 10, 20]);
+          }
       translate([0, spacing + 2*thickness - 2, -5]) {
         difference() {
           cube([width, 7, 6]);
@@ -53,7 +53,7 @@ module tubeBracket(holeCount, glassThickness) {
       }
     };
     holes(holeCount = holeCount, rotation = 0, translateY = -11, translateZ = -1);
-    holes(holeCount = holeCount, rotation = 0, translateY = 33, translateZ = -1);
+    holes(holeCount = holeCount, rotation = 0, translateY = 20 + spacing, translateZ = -1);
     holes(holeCount = holeCount, rotation = 90, translateY = 10, translateZ = 17);
   }
 }
@@ -67,4 +67,4 @@ module holes(holeCount, rotation, translateY, translateZ) {
 }
 
 
-tubeBracket(holeCount = 10, glassThickness = 10);
+tubeBracket(holeCount = 6, glassThickness = 10);
