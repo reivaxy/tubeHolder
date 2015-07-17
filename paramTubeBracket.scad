@@ -1,6 +1,6 @@
 
 module tubeBracket(holeCount, glassThickness) {
-  width = holeCount * 8;
+  width = (holeCount * 8) + 2;
   spacing = glassThickness + 3;
   thickness = 6;
 //  translate([0, 0, width])
@@ -60,11 +60,11 @@ module tubeBracket(holeCount, glassThickness) {
 
 module holes(holeCount, rotation, translateY, translateZ) {
   for(hole = [1 : holeCount]) {
-    translate([hole*8 - 4, translateY, translateZ])
+    translate([hole*8 - 3, translateY, translateZ])
       rotate(rotation, [1, 0, 0])
         cylinder(h=12, r = 2.5, $fn=20);
   }
 }
 
 
-tubeBracket(holeCount = 6, glassThickness = 10);
+tubeBracket(holeCount = 3, glassThickness = 10);
