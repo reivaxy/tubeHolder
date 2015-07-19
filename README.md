@@ -1,11 +1,13 @@
 # tubeHolder
 
 
-This is a project to 3D-print a peristaltic pump tube holder for up to 4 tubes on a tank side from 4 to 8 millimiter width.
+*New* : the openScad file paramTubeBracket.scad allows you to create a bracket for any given number of tubes, and any glass thickness to match your needs ! You can either use it within openScad, or go there : http://www.thingiverse.com/thing:929873 and click "Open in Customizer"
+
+This is a project to 3D-print a peristaltic pump tube holder.
 
 The source file (.FCStd) was created with FreeCAD, and the .obj file can be used with MakerBot or ReplicatorG to 3D print the holder.
+It will allow you to print a bracket to hold 4 tubes on a tank side from 4 to 8 millimiter width
 
-*New* : the openScad file paramTubeBracket.scad allows you to create a bracket for any given number of tubes, and any glass thickness to match your needs ! You can either use it within openScad, or go there : http://www.thingiverse.com/thing:929873 and click "Open in Customizer"
 
 
 Here is the design:
