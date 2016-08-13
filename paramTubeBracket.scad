@@ -10,9 +10,12 @@ glassThickness = 10; // in millimeters
 
 
 module tubeBracket(holeCount, glassThickness) {
+  glassThickness = glassThickness + 1; // to account for added spheres
   width = (holeCount * 8) + 2;  // body width
   spacing = glassThickness + 3; // space between each branch of the fork
   thickness = 6;  // body thickness
+  sphereD = 6;
+  lengthMain = 102;
   
   translate([0, 0, width]) // position ready for printing
   rotate(90, [0, 1, 0])
@@ -39,7 +42,16 @@ module tubeBracket(holeCount, glassThickness) {
         cube([width, 42 + spacing, thickness]);  // horizontal
       translate([0, 0, -80]) {
         difference() {
-          cube([width, thickness, 102]);  // main vertical
+          union() {
+          cube([width, thickness, lengthMain]);  // main vertical
+          // Add spheres to not allow water to climb because of capilarity.
+          for(i = [1:1:lengthMain/(2*sphereD)]) {
+            translate([(width - sphereD)/4, sphereD/2 + 1.3, i*2*sphereD ])
+              sphere(d = sphereD , $fn=50);
+            translate([width - (width - sphereD)/4, sphereD/2 + 1.3 , i*2*sphereD])
+              sphere(d = sphereD , $fn=50);
+          }        
+          }  
           translate([-5,1,-5])
           rotate(40, [1,0,0])
             cube([width + 10, 10, 20]);  // bottom chamfer
