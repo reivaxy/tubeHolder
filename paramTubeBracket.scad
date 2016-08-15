@@ -45,10 +45,10 @@ module tubeBracket(holeCount, glassThickness) {
           union() {
           cube([width, thickness, lengthMain]);  // main vertical
           // Add spheres to not allow water to climb because of capilarity.
-          for(i = [1:1:lengthMain/(2*sphereD)]) {
-            translate([(width - sphereD)/4, sphereD/2 + 1.3, i*2*sphereD ])
+          for(i = [1:1:lengthMain/(2*sphereD)-1]) {
+            translate([(width - sphereD)/4, sphereD/2 + 1.3, i*2*sphereD - 10])
               sphere(d = sphereD , $fn=50);
-            translate([width - (width - sphereD)/4, sphereD/2 + 1.3 , i*2*sphereD])
+            translate([width - (width - sphereD)/4, sphereD/2 + 1.3 , i*2*sphereD - 10])
               sphere(d = sphereD , $fn=50);
           }        
           }  
